@@ -1,6 +1,6 @@
 ## Rendering
 
-lorem TODO
+To apply DOC-Depth composite rendering to the pre-processed dataset, use the following command :
 
 
 ```bash
@@ -12,3 +12,5 @@ For more options see :
 ```bash
     python render.py -h
 ```
+
+You should now have your dataset with fully dense depth annotations !

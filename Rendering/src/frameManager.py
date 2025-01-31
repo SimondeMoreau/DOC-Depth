@@ -56,7 +56,14 @@ class FrameManager:
                 trame,meta,dt_meta = readPly(ply_filename)
 
                 # Get static points
-                trame = self.getStatic(trame,meta,dt_meta)
+                # GENERAL
+                # trame = self.getStatic(trame,meta,dt_meta)
+                
+                #KITTI
+                if abs(pose.index - self.traj_lidar[-1].index) < 5: # Last frames we want to keep the full point cloud to keep maximum density
+                    trame = self.getStatic(trame,meta,dt_meta,no_mask=True)
+                else:
+                    trame = self.getStatic(trame,meta,dt_meta)
 
                 # Get the point cloud in the right size
                 trame = self.getSizedPointcloud(trame)
@@ -105,7 +112,7 @@ class FrameManager:
     def getDynamicFrame(self):
         return self.dynamic_frame
 
-    def getStatic(self,trame,others,dt_others):
+    def getStatic(self,trame,others,dt_others,no_mask=False):
         # Retrieve the classification
         idx_classid = getPropertieIndex(dt_others,self.classif_property_name)
         mask_static = others[:,idx_classid]<100                  
@@ -115,7 +122,15 @@ class FrameManager:
         mask_floor = mask_floor[mask_static]
         
         # TODO: Find a better way to manage the crop
-        crop_mask = (np.abs(trame[:,0])<30)  | (mask_floor & (np.abs(trame[:,0])<30))
+        # GENERAL
+        # crop_mask = (np.abs(trame[:,0])<30)  | (mask_floor & (np.abs(trame[:,0])<30))
+        # trame = trame[crop_mask]
+
+        #FOR KITTI
+        if no_mask:
+            crop_mask = np.ones(trame.shape[0],dtype=bool)
+        else:
+            crop_mask = (~mask_floor) | (mask_floor & (np.abs(trame[:,0])<20))  
         trame = trame[crop_mask]
 
         norm = np.linalg.norm(trame,axis=1)
