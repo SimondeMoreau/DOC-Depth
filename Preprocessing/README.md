@@ -3,8 +3,10 @@ After recording, we must process the file before the rendering.
 
 The rendering takes as input a set of classified frames and a trajectory. You can use [Exwayz](https://www.exwayz.fr/) software to generate these. For academic usage, you can apply to Exwayz academic program. 
 
+You can use any low-drift SLAM software. File formats needed for the rest of the pipeline will be added soon.
+
 ## SLAM
-Use the following command to run the SLAM on your bag and aggregate the LiDAR frames :
+Use the following command to run the SLAM on your bag and aggregate the LiDAR frames:
 
 ```bash
     ./exwayz_slam --bag [bag_file] -o [output_directory]
@@ -31,10 +33,10 @@ Or this one, if you want to undistort images :
 ```
 
 ## Interpolate camera trajectory
-Since we assume only a software synchronisation between sensors, we must estimate the LiDAR position at each camera timestamp using :
+Since we assume only a software synchronisation between sensors, we must estimate the LiDAR position at each camera timestamp using:
 
 ```bash
     python camera_trajectory.py [traj_odometry.ply file] [images_dir] [output_file.ply]
 ```
 
-You can now apply our composite rendering !
+You can now apply our composite rendering!

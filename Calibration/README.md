@@ -1,14 +1,14 @@
-## Calibration
+# Calibration
 The purpose of the calibration is to obtain simultaneously the intrisic matrix of the camera and the extrinsic calibration between the LiDAR and the camera.
 
-## Harware
+## Hardware
 To perform this calibration, you need a camera, a LiDAR and a [large checkerboard target](https://github.com/opencv/opencv/blob/4.x/doc/pattern.png).
 You'll need to perform a calibration process by recording multiple images of the checkerboard in front of the sensors with various locations and orientations. 
 
 ## Using Ouster LiDAR
 
 
-If you have a Ouster LiDAR and a USB camera you can use our app_calib.py to perform a real-time recording of synchronized calibration frame of the two sensors. Start the tool using :
+If you have a Ouster LiDAR and a USB camera you can use our app_calib.py to perform a real-time recording of synchronized calibration frame of the two sensors. Start the tool using:
 
 ```bash
     python app_calib.py -d [video_device] -l [lidar_hostname] -p [lidar_port] -m [checkerboard_square_size] -c [checkerboard_size]
@@ -38,7 +38,7 @@ You must click on the target plane (one point) using "Shift+Click" and then type
 
 ## Compute calibration
 
-Finally, you can use the following commands to compute both calibration :
+Finally, you can use the following commands to compute both calibration:
 
 ```bash
     python app_calib.py --compute-intrinsic
