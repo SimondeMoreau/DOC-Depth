@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630"/>
 
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="LED Light Enhanced Depth Estimation at Night HD Headlight Simon de Moreau Andrei Bursuc Fabien Moutarde">
+  <meta name="keywords" content="LED Light Enhanced Depth Estimation at Night HD Headlight Simon de Moreau Andrei Bursuc Fabien Moutarde Hassan Bouchiba Yasser Almehio Hafid El-Idrissi Mathias Corsia Valeo Mines Paris PSL University Exwayz Research">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -47,6 +47,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title">DOC-Depth: A novel approach for dense depth ground truth generation</h1>
+            <h2 class="title is-4 publication-title">IEEE IV 2025 <span style="margin-left: 10px; color:hsl(0deg 100% 43.72%)">Oral Presentation</span></h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -85,28 +86,30 @@
                   </div>
 
                   <div class="column has-text-centered">
+
                     <div class="publication-links">
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2502.02144" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                      </span>
+
                          <!-- Arxiv PDF link -->
                       <!-- <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2502.02144" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span> -->
+                      </span> -->
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -119,16 +122,7 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="#" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-                </span> -->
+                
 
                 <span class="link-block">
                   <a href="#Dataset"
@@ -137,8 +131,36 @@
                     <i class="fas fa-download"></i>
                   </span>
                   <span>Dataset</span>
+                  </a>
+                </span>
+
+
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/DOC-Depth_poster.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
                 </a>
               </span>
+
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/DOC-Depth_slides-static.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-desktop"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+
+
+
             </div>
           </div>
         </div>
@@ -178,7 +200,7 @@
             After reconstructing consistent dense 3D environment using LiDAR odometry, we address dynamic objects occlusions automatically thanks to DOC, 
             our state-of-the art dynamic object classification method. 
             Additionally, DOC-Depth is fast and scalable, allowing for the creation of unbounded datasets in terms of size and time. 
-            We demonstrate the effectiveness of our approach on the KITTI dataset, improving its density from 16.1\% to 71.2\% and 
+            We demonstrate the effectiveness of our approach on the KITTI dataset, improving its density from 16.1% to 71.2% and 
             release this new fully dense depth annotation, to facilitate future research in the domain. 
             We also showcase results using various LiDAR sensors and in multiple environments.
             <!-- All software components will be made publicly available for the research community. -->
@@ -258,8 +280,7 @@
     <br>
     <div class="columns is-centered has-text-centered">
       <span style="width: 80%;">
-        Full KITTI depth completion and KITTI odometry dataset download link will be added soon. 
-        To download the evaluation set of KITTI depth completion dataset please use this link: 
+        Dense depth annotations for the full KITTI Depth dataset and the KITTI Odometry training dataset can be downloaded using this link:
       </span>
     </div><br>
     <div class="columns is-centered has-text-centered">
@@ -398,7 +419,12 @@
       year = {2024},
     }</code></pre> -->
 
-    <pre><code class="c0py">TBA</code></pre>
+    <pre><code class="c0py">@inproceedings{deMoreau2024doc,
+  title = {DOC-Depth: A novel approach for dense depth ground truth generation},
+  author = {De Moreau, Simon and Corsia, Mathias and Bouchiba, Hassan and Almehio, Yasser and Bursuc, Andrei and El-Idrissi, Hafid and Moutarde, Fabien},
+  booktitle = {2025 IEEE Intelligent Vehicles Symposium (IV)},
+  year = {2025},
+}</code></pre>
   </div>
 </section>
 <script src="https://cdn.jsdelivr.net/gh/Djongov/cClipboard@v2.1/cClipboard.min.js"></script>
