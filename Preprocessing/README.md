@@ -3,7 +3,7 @@ After recording, we must process the file before the rendering.
 
 The rendering takes as input a set of classified frames and a trajectory. You can use [Exwayz](https://www.exwayz.fr/) software to generate these. For academic usage, you can apply to Exwayz academic program. 
 
-You can use any low-drift SLAM software. File formats needed for the rest of the pipeline will be added soon.
+You can use any low-drift SLAM system. If you plan to use a custom SLAM or Dynamic Object Classification method, please refer to [FORMAT.md](FORMAT.md) for the required file format to ensure compatibility with the rest of the pipeline.
 
 ## SLAM
 Use the following command to run the SLAM on your bag and aggregate the LiDAR frames:
