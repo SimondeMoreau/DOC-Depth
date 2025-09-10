@@ -17,10 +17,10 @@ class Pose:
 
     def interpolate(p1,p2,t):
         #Get position
-        u1 = p1.T.translation()
-        u2 = p2.T.translation()
-        q1 = p1.T.quaternion()
-        q2 = p2.T.quaternion()
+        u1 = p1.transform.translation()
+        u2 = p2.transform.translation()
+        q1 = p1.transform.quaternion()
+        q2 = p2.transform.quaternion()
         t1 = p1.timestamp
         t2 = p2.timestamp
 
